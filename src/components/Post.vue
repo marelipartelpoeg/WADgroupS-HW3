@@ -51,6 +51,7 @@ export default {
 }
 
 .header {
+  margin-left: 30px;
   display: flex;
   align-items: center;
   gap: 170px;
@@ -66,6 +67,8 @@ export default {
 }
 
 .like-count {
+  position: relative;
+  top: -8px;
   font-weight: bold;
   margin-left: 10px;
 }
@@ -76,6 +79,7 @@ export default {
   background-position: center;
   background-size: contain;
   background-color: rgb(231, 231, 231);
+  margin-bottom: 10px;
   width: 30px;
   height: 30px;
   border: none;

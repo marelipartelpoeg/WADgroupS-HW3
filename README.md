@@ -1,4 +1,4 @@
-# hw3
+# WADgroupS-HW3
 
 ## Project setup
 

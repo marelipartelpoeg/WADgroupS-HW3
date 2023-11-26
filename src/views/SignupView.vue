@@ -4,20 +4,20 @@
         <section class="signup-page">
           <div class="form-container">
             <form @submit.prevent="submitForm">
-                <div class="container">
-                    <div class="column">
-                    <label>Email</label><br>
-                    <label>Password</label>
-                    </div>
-                    <div class="column">
-                    <input type="text" placeholder="Email" name="email" required><br>
-                    <input type="password" placeholder="Password" name="psw" required v-model="password">
-                    </div>
+              <div class="container">
+                <div class="column">
+                  <label>Email</label><br>
+                  <label>Password</label>
                 </div>
-                <button type="submit">Signup</button>
+                <div class="column">
+                  <input type="text" placeholder="Email" name="email" required><br>
+                  <input type="password" placeholder="Password" name="psw" required v-model="password">
+                </div>
+              </div><br>
+              <button type="submit">Signup</button>
+              <p v-if="passwordValidationMessage">{{ passwordValidationMessage }}</p>
             </form><br>
-        </div>
-        <p v-if="passwordValidationMessage">{{ passwordValidationMessage }}</p>
+          </div>
         </section>
       </main>
     </div>
@@ -93,13 +93,14 @@
   
 <style scoped>
 form {
-    background-color:#ccc;
-    border-radius: 15px;
+    border-radius: 25px;
+    border: 2px solid #2a2cc9;
+    background-color:rgb(231, 231, 231);
 }
 
 label {
     padding: 12px 15px;
-    margin: -1px 0px;
+    margin: -1px 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -115,7 +116,7 @@ input {
 }
 
 button {
-    background-color: #092747;
+    background-color: #2a2cc9;
     color: white;
     padding: 14px 20px;
     margin: 8px 0px 15px 0px;
@@ -135,9 +136,10 @@ button:hover {
 }
 
 .form-container {
+    margin-top: 100px;
     display: flex;
-	align-items: center;
-	flex-direction: column;
+    align-items: center;
+    flex-direction: column;
 }
 
 .container {
@@ -145,5 +147,5 @@ button:hover {
     padding: 15px 0px;
     display: inline-flex;
 }
-  </style>
+</style>
   

@@ -29,12 +29,14 @@ export default {
 
 <style scoped>
 .post-container {
+  margin-top: 50px;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
 .reset-likes {
+  margin-bottom: 70px;
   position: sticky;
   bottom: 0;
 }
