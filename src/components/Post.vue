@@ -81,4 +81,7 @@ export default {
   border: none;
   cursor: pointer;
 }
+.post .like-button:hover {
+  background-image: url('/public/like_pink.png');
+}
 </style>

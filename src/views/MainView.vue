@@ -1,10 +1,12 @@
 <template>
+  <body>
   <div class="post-container">
     <post v-for="post in postList" :key="post.id" :post="post"></post>
   </div>
   <div class="reset-likes">
     <button @click="resetLikes">Reset likes</button>
   </div>
+  </body>
 </template>
 
 <script>
@@ -28,6 +30,10 @@ export default {
 </script>
 
 <style scoped>
+body {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 .post-container {
   display: flex;
   align-items: center;
@@ -36,6 +42,6 @@ export default {
 
 .reset-likes {
   position: sticky;
-  bottom: 0;
+  bottom: 55px;
 }
 </style>
