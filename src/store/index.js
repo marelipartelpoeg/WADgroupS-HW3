@@ -65,7 +65,7 @@ export default createStore({
                 "date": "Sep 20, 2023",
                 "picture": "panda.jpg",
                 "text": "I ♥ pandas!",
-                "likes": 0,
+                "likes": 1000,
             },
             {
                 "id": 9,
