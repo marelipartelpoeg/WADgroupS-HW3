@@ -1,26 +1,26 @@
 <template>
-    <div>
-      <main>
-        <section class="signup-page">
-          <div class="form-container">
-            <form @submit.prevent="submitForm">
-                <div class="container">
-                    <div class="column">
-                    <label>Email</label><br>
-                    <label>Password</label>
-                    </div>
-                    <div class="column">
-                    <input type="text" placeholder="Email" name="email" required><br>
-                    <input type="password" placeholder="Password" name="psw" required v-model="password">
-                    </div>
-                </div>
-                <button type="submit">Signup</button>
-            </form><br>
+  <div>
+    <main>
+      <section class="signup-page">
+        <div class="form-container">
+          <form @submit.prevent="submitForm">
+            <div class="container">
+              <div class="column">
+                <label>Email</label><br>
+                <label>Password</label>
+              </div>
+              <div class="column">
+                <input type="text" placeholder="Email" name="email" required><br>
+                <input type="password" placeholder="Password" name="psw" required>
+              </div>
+            </div><br>
+            <button type="submit">Signup</button>
+            <p v-if="passwordValidationMessage">{{ passwordValidationMessage }}</p>
+          </form>
         </div>
-        <p v-if="passwordValidationMessage">{{ passwordValidationMessage }}</p>
-        </section>
-      </main>
-    </div>
+      </section>
+    </main>
+  </div>
 </template>
   
 <script>
@@ -98,7 +98,7 @@ form {
 
 label {
     padding: 12px 15px;
-    margin: -1px 0px;
+    margin: -1px 10px 0px 15px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -124,27 +124,25 @@ button {
     width: 30%;
 }
 
+p {
+    width: 320px;
+    padding: 0px 15px;
+}
+
 button:hover {
     opacity: 0.7;
 }
 
 .form-container {
     display: flex;
-	align-items: center;
-	flex-direction: column;
+    align-items: center;
+    flex-direction: column;
 }
 
 .container {
+    width: 350px;
     padding: 15px 0px;
     display: inline-flex;
-}
-
-@media screen and (max-width: 300px) {
-    span.psw {
-        display: block;
-        float: none;
-    }
-
 }
   </style>
   
