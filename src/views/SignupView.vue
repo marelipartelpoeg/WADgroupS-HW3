@@ -92,7 +92,6 @@ export default {
 };
 </script>
   
-  
 <style scoped>
 form {
   background-color:#ccc;
