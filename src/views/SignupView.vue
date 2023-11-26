@@ -11,7 +11,7 @@
                     </div>
                     <div class="column">
                     <input type="text" placeholder="Email" name="email" required><br>
-                    <input type="password" placeholder="Password" name="psw" required>
+                    <input type="password" placeholder="Password" name="psw" required v-model="password">
                     </div>
                 </div>
                 <button type="submit">Signup</button>
@@ -27,7 +27,7 @@
   export default {
     data() {
       return {
-        password: "",
+        password: "" ,
         passwordValidationMessage: "",
       };
     },
@@ -45,46 +45,44 @@
             "Password is not valid. Password must be 8-14 characters long, contain at least one uppercase letter, two lowercase letters, one digit, start with an uppercase letter, and include the character \"_\".";
         }
       },
-      validatePassword(password) {
+      validatePassword: function (password) {
         const minLength = 8;
         const maxLength = 14;
-  
         // Password length check
         if (password.length < minLength || password.length > maxLength) {
-            console.log("Wrong length")
+          console.log("Wrong length")
           return false;
         }
-  
+
         // At least one uppercase alphabet character
         if (!/[A-Z]/.test(password)) {
-            console.log("No uppercase letters")
+          console.log("No uppercase letters")
           return false;
         }
-  
         // At least two lowercase alphabet characters
-        if ((password.match(/[a-z]/g) || []).length < 2) {
-            console.log("Less than 2 lowercase letters")
+        if (!/[a-z]/.test(password) || password.length < 2) {
+          console.log("Less than 2 lowercase letters")
           return false;
         }
-  
+
         // At least one numeric value
         if (!/\d/.test(password)) {
-            console.log("No digits")
+          console.log("No digits")
           return false;
         }
-  
+
         // Should start with an uppercase alphabet
-        if (!/^[A-Z]/.test(password)) {
-            console.log("Doesn't start with uppercase letter")
+        if (!password[0].match(/[A-Z]/)) {
+          console.log("Doesn't start with uppercase letter")
           return false;
         }
-  
+
         // Should include the character "_"
-        if (!/_/.test(password)) {
-            console.log("Doesn't include the character \"_\"")
+        if (!password.includes("_")) {
+          console.log("Doesn't include the character \"_\"")
           return false;
         }
-  
+
         // If all conditions pass, the password is valid
         return true;
       },
