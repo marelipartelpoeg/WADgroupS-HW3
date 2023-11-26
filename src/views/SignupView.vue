@@ -94,9 +94,9 @@ export default {
 
 <style scoped>
 form {
-    border-radius: 25px;
-    border: 2px solid #2a2cc9;
-    background-color:rgb(231, 231, 231);
+  border-radius: 25px;
+  border: 2px solid #2a2cc9;
+  background-color:rgb(231, 231, 231);
 }
 
 label {
@@ -127,10 +127,6 @@ button {
   width: 30%;
 }
 
-main {
-  margin-top: 200px;
-}
-
 p {
   padding: 0px 15px;
 }
@@ -140,10 +136,10 @@ button:hover {
 }
 
 .form-container {
-    margin-top: 100px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  margin-top: 108px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .container {
