@@ -11,7 +11,7 @@
               </div>
               <div class="column">
                 <input type="text" placeholder="Email" name="email" required><br>
-                <input type="password" placeholder="Password" name="psw" required>
+                <input type="password" placeholder="Password" name="psw" required v-model="password">
               </div>
             </div><br>
             <button type="submit">Signup</button>
