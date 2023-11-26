@@ -128,6 +128,7 @@ button {
 }
 
 p {
+  width: 320px;
   padding: 0px 15px;
 }
 
